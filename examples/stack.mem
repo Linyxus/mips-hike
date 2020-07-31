@@ -1,0 +1,12 @@
+pushi 100
+pushi 200
+pushi 300
+pop $1
+pop $2
+pop $3
+push $3
+mov $3 $1
+mov $1 $2
+mov $2 $3
+pop $3
+break

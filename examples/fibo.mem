@@ -1,0 +1,31 @@
+lwi $20 0
+mov $5 $20
+lwi $20 1
+mov $6 $20
+lwi $20 0
+mov $7 $20
+nop
+mov $20 $7
+lwda $21 30
+slt $20 $20 $21
+beq $20 $0 68
+mov $20 $6
+lwi $1 0
+mov $2 $20
+syscall
+mov $20 $5
+mov $21 $6
+add $20 $20 $21
+mov $8 $20
+mov $20 $6
+mov $5 $20
+mov $20 $8
+mov $6 $20
+mov $20 $7
+lwi $21 1
+add $20 $20 $21
+mov $7 $20
+b -88
+nop
+break
+dw 10

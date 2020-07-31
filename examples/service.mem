@@ -1,0 +1,8 @@
+disp "Interrupt service\n"
+push $23
+mov $23 $21
+mov $21 $22
+mov $22 $23
+pop $23
+ei
+eret

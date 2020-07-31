@@ -1,0 +1,23 @@
+ei
+lwi $21 10
+lwi $22 20
+lwi $23 30
+lwi $1 0
+disp "Value of R21 R22 R23:\n"
+mov $2 $21
+syscall
+mov $2 $22
+syscall
+mov $2 $23
+syscall
+disp "Trigger interrupt\n"
+inte 10
+disp "Return from interrupt service\n"
+disp "Value of R21 R22 R23:\n"
+mov $2 $21
+syscall
+mov $2 $22
+syscall
+mov $2 $23
+syscall
+break

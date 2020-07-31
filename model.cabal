@@ -1,0 +1,44 @@
+cabal-version: 2.4
+name: model
+version: 1.0.0
+license: BSD-3-Clause
+build-type: Simple
+
+executable compiler
+    build-depends: base < 5
+                 , mtl
+                 , containers
+                 , lens
+                 , bytestring
+                 , optparse-applicative
+                 , array
+                 , megaparsec
+                 , text
+                 , parser-combinators
+    other-modules: Lang.CLike.Types
+                 , Lang.CLike.Parser
+                 , Lang.MipsLike.Types
+                 , Lang.Compiler.Compile
+                 , Lang.Compiler.Types
+    main-is: Main.hs
+    hs-source-dirs: compiler-src
+    default-language: Haskell2010
+
+executable model
+    build-depends: base < 5
+                 , mtl
+                 , containers
+                 , lens
+                 , bytestring
+                 , optparse-applicative
+                 , array
+                 , megaparsec
+                 , text
+                 , parser-combinators
+    other-modules: Model.Types
+                 , Model.Runtime
+                 , Model.Memory.Parsers
+                 , Model.Simple
+    main-is: Main.hs
+    hs-source-dirs: src
+    default-language: Haskell2010

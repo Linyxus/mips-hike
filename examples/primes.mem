@@ -1,0 +1,115 @@
+lwi $20 2
+mov $5 $20
+nop
+mov $20 $5
+lwda $21 114
+slt $20 $20 $21
+beq $20 $0 180
+lwi $20 336
+mov $21 $5
+lwi $22 4
+mult $21 $22
+mflo $21
+add $20 $20 $21
+lwria $20 $20
+mov $6 $20
+mov $20 $6
+beq $20 $0 112
+lwi $20 2
+mov $7 $20
+nop
+mov $20 $5
+mov $21 $7
+mult $20 $21
+mflo $20
+lwda $21 114
+slt $20 $20 $21
+beq $20 $0 64
+lwi $20 336
+mov $21 $5
+mov $22 $7
+mult $21 $22
+mflo $21
+lwi $22 4
+mult $21 $22
+mflo $21
+add $20 $20 $21
+lwi $21 0
+swria $21 $20
+mov $20 $7
+lwi $21 1
+add $20 $20 $21
+mov $7 $20
+b -96
+nop
+b 4
+nop
+nop
+mov $20 $5
+lwi $21 1
+add $20 $20 $21
+mov $5 $20
+b -200
+nop
+lwi $20 2
+mov $5 $20
+nop
+mov $20 $5
+lwda $21 114
+slt $20 $20 $21
+beq $20 $0 88
+lwi $20 336
+mov $21 $5
+lwi $22 4
+mult $21 $22
+mflo $21
+add $20 $20 $21
+lwria $20 $20
+mov $6 $20
+mov $20 $6
+beq $20 $0 20
+mov $20 $5
+lwi $1 0
+mov $2 $20
+syscall
+b 4
+nop
+nop
+mov $20 $5
+lwi $21 1
+add $20 $20 $21
+mov $5 $20
+b -108
+nop
+break
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 1
+dw 30
